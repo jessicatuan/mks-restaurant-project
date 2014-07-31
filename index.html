@@ -8,7 +8,7 @@
 
         <!-- Google Fonts -->
         <!-- TODO We're going to use the Google Font 'Bitter'. https://www.google.com/fonts#UsePlace:use/Collection:Bitter Link to it here -->
-        <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Bitter">
+        <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 
         <!-- Foundation CSS -->
        <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -56,31 +56,25 @@
             <!-- TODO add a foundation row wrapping this content. do you know why you would add it here as a div, instead of as a class on the section.address? What would happen if you did that? -->
 
                 <!-- TODO for each of these 3 divs (location, map, hours), add foundation column classes so that they sit side by side at large screen sizes, and stack on top of each other at a small screen size -->
-                <div class="location">
-                    <div class="small-4 columns">
+                    <div class="location small-4 columns">
                     <!-- TODO link to the hotel website and make the telephone a tel: link, and style this content -->
-                    at the <a href="http://www.radisson.com/austin-hotel-tx-78701/txaustdt/optional/chavez/detail">Radisson Hotel</a>
+                    <p>at the <a href="http://www.radisson.com/austin-hotel-tx-78701/txaustdt/optional/chavez/detail">Radisson Hotel</a></p>
                     <br>111 east cesar chavez</br>
                     austin, texas 78701
                     <br><a href="tel:5124782291">512.478.2291</a></br>
                 </div>
-                </div>
 
-                <div class="map">
-                    <div class="small-4 columns">
+                    <div class="map small-4 columns">
                     <a href="goo.gl/maps/qgnVW"><img src="images/map.png"></a>
                     <!-- TODO there is a map image in the images folder, link to it and make the link to go this google map: goo.gl/maps/qgnVW -->
                 </div>
-                </div>
 
-                <div class="hours">
-                    <div class="small-4 columns">
+                    <div class="hours small-4 columns">
                     <!-- TODO style this content. use the classes .hours-label and .hours-value to determine which part is which and style it -->
-                    breakfast: 6:30–11am
-                    <br>lunch: 11am–3pm</br>
-                    limited menu: 3–5pm
-                    <br>dinner: 5–10pm</br>
-                </div>
+                    <br><div class="hours-label">breakfast:</div> <div class="hours-value">6:30–11am</div></br>
+                    <div class="hours-label">lunch:</div> <div class="hours-value">11am–3pm</div>
+                    <br><div class="hours-label">limited menu:</div> <div class="hours-value">3–5pm</div></br>
+                    <div class="hours-label">dinner:</div> <div class="hours-value"> 5–10pm</div>
                 </div>
             </div>
         </section>
@@ -101,58 +95,55 @@
 
                 The menu-action class will be used in the JavaScript later. -->
                 
-                <div class="menu-action menu-breakfast small-2 columns" id="menu-action-breakfast">
+                <div class="menu-action menu-section small-2 columns" id="menu-action-breakfast">
                     <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
-                        <a href="#breakfast">
+                        <a href="#">Breakfast</a>
                             <!-- TODO name of menu section -->
                         </a>
                     </h3>
                 </div>
 
-                <div class="menu-action menu-lunch small-2 columns" id="menu-action-lunch">
+                <div class="menu-action menu-section small-2 columns" id="menu-action-lunch">
                     <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
-                        <a href="#lunch">
+                        <a href="#">Lunch</a>
                             <!-- TODO name of menu section -->
                         </a>
                     </h3>
                 </div>
 
-                  <div class="menu-action menu-dinner small-2 columns" id="menu-action-dinner">
+                  <div class="menu-action menu-section small-2 columns" id="menu-action-dinner">
                     <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
-                        <a href="#dinner">
+                        <a href="#">Dinner</a>
                             <!-- TODO name of menu section -->
                         </a>
                     </h3>
                 </div>
-            </div>
 
-            <div class="menu-action menu-dessert small-2 columns" id="menu-action-dessert">
+            <div class="menu-action menu-section small-2 columns" id="menu-action-dessert">
                     <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
-                        <a href="#dessert">
+                        <a href="#">Dessert</a>
                             <!-- TODO name of menu section -->
                         </a>
                     </h3>
                 </div>
-            </div>
 
-            <div class="menu-action menu-cocktails small-2 columns" id="menu-action-cocktails">
+            <div class="menu-action menu-section small-2 columns" id="menu-action-cocktails">
                     <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
-                        <a href="#cocktails">
+                        <a href="#">Cocktails</a>
                             <!-- TODO name of menu section -->
                         </a>
                     </h3>
                 </div>
-            </div>
 
-            <div class="menu-action menu-wine small-2 columns" id="menu-action-wine">
+            <div class="menu-action menu-section small-2 columns" id="menu-action-wine">
                     <h3>
                         <!-- TODO later we will write JavaScript to toggle the menu sections, using this link -->
-                        <a href="#wine">
+                        <a href="#">Wine</a>
                             <!-- TODO name of menu section -->
                         </a>
                     </h3>
@@ -160,10 +151,10 @@
             </div>
             <!-- TODO add a foundation row to wrap around this content -->
 
+                <div class="row">
                 <div id="menu-section-content" class="menu-section-content menu-dinner is-active">
                     <!-- TODO we'll add the dinner menu content here. Write two columns with the class .menu-group and the foundation column classes. -->
-
-                        <div class="menu-group small-6 columns">
+                        <div class="menu-group small-6 medium-6 large-6 columns">
                             <!-- TODO Inside each .menu-group, there should be an h4 with the title. -->
                             <h4>Raw Bar</h4>
                             <!-- TODO for each item on the menu, write a div.menu-item. -->
@@ -313,7 +304,8 @@
                                 <!-- TODO we are going to do ONLY the "Raw Bar" and "Entrees" section of the dinner menu for now. You can find that content in /menu-content/menu-dinner.md We'll add the rest of the menus with JSON later. -->
                         </div>
                 </div>
-
+            </div>
+        </div>
         </section>
 
         <!-- Social media -->
@@ -367,7 +359,7 @@
 
         <!-- Slides.js -->
         <!-- TODO link to the slides.min.js file -->
-         <link rel="stylesheet" type="text/css" href="css/slides.min.js">
+         <script src="css/slides.min.js"></script>
         <!-- TODO write the .slidesjs() code to make the slideshow work -->
 
 
